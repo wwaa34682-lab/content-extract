@@ -73,6 +73,10 @@ def transcribe(media, work, cfg):
     for s in segs:
         txt = s.text.strip()
         if conv: txt = conv.convert(txt)
+        if a.get("language", "zh") == "zh":  # 中文语境下半角标点转全角
+            txt = re.sub(r"(?<=[\u4e00-\u9fff]),|,(?=[\u4e00-\u9fff])", "，", txt)
+            for h, f in ((r"\?", "？"), (r"!", "！"), (r":", "："), (r";", "；")):
+                txt = re.sub(rf"(?<=[\u4e00-\u9fff]){h}", f, txt)
         for k, v in (a.get("replacements") or {}).items(): txt = txt.replace(k, v)
         out.append({"start": round(s.start, 2), "end": round(s.end, 2), "text": txt})
     wav.unlink()

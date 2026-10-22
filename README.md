@@ -8,7 +8,7 @@
 - 中文可直接阅读；行业术语可通过配置里的 `hotwords` / `replacements` 纠正（如"机球→击球"）。
 
 ## 给 Agent 的一句话安装提示
-> 克隆 https://github.com/<you>/content-extract ，在仓库根目录运行 install 脚本（Windows 用 install.ps1，其余用 install.sh），然后按 SKILL.md 使用。
+> 克隆 https://github.com/wwaa34682-lab/content-extract ，在仓库根目录运行 install 脚本（Windows 用 install.ps1，其余用 install.sh），然后按 SKILL.md 使用。
 
 想作为 Skill 常驻：把整个仓库放到你的 Agent 的 skills 目录（如 `~/.claude/skills/content-extract`、`~/.codex/skills/content-extract` 或项目内 `.cursor/skills/`）。
 
@@ -17,7 +17,7 @@
 
 **macOS / Linux**
 ```sh
-git clone https://github.com/<you>/content-extract && cd content-extract
+git clone https://github.com/wwaa34682-lab/content-extract && cd content-extract
 sh install.sh
 .venv/bin/python scripts/extract.py "https://www.youtube.com/watch?v=xxxx"
 ```
@@ -25,7 +25,7 @@ sh install.sh
 **Windows（PowerShell）**
 ```powershell
 winget install Python.Python.3.12        # 如未安装 Python
-git clone https://github.com/<you>/content-extract; cd content-extract
+git clone https://github.com/wwaa34682-lab/content-extract; cd content-extract
 powershell -ExecutionPolicy Bypass -File install.ps1
 .venv\Scripts\python.exe scripts\extract.py "D:\素材\视频 1.mp4"
 ```
