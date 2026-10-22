@@ -1,0 +1,13 @@
+# 示例 preset：城市高尔夫教学门店（数字仅为示例）
+industry: "高尔夫教学"
+brand: "示例高尔夫学院"
+asr: {model: small, device: auto, compute_type: int8, language: zh, simplified: true, hotwords: [击球, 挥杆, 上杆, 下杆, 收杆, 推杆, 铁杆, 木杆, 握杆, 站位, 惯用手, 真草, 模拟器, PGA],
+      replacements: {机球: 击球, 罐用手: 惯用手, 送轴线: 纵轴线}}
+keyframes: {interval_sec: 5, max_frames: 12}
+audiences:
+  - {name: 都市社交, share: 35, note: "把高尔夫当社交/商务场景"}
+  - {name: 新手低门槛, share: 25, note: "零基础、怕贵怕难"}
+  - {name: 女性穿搭出片, share: 25, note: "关注穿搭、拍照、氛围"}
+  - {name: 专业进阶, share: 15, note: "关注技术细节与教练资质"}
+audience_profile: "一线城市 25-44 岁，女性为主"
+rewrite_types: [活动转化, 生活方式种草, 用户故事, 专业教育, 评论运营]

@@ -1,0 +1,23 @@
+# 复制为 config.yaml 后修改。也可用 --preset presets/<name>.yaml
+industry: "通用"
+brand: ""
+asr:
+  model: small          # tiny/base/small/medium/large-v3；CPU 推荐 small
+  device: auto          # auto/cpu/cuda
+  compute_type: int8
+  language: zh
+  simplified: true      # 繁体转简体
+  hotwords: []          # 行业术语，提升识别准确率
+  replacements: {}      # 转写后固定纠错，如 {错词: 正词}
+keyframes:
+  interval_sec: 5       # 每隔多少秒抽一帧
+  max_frames: 12
+audiences:              # 受众及占比（%），拆解时逐一评估适配度
+  - {name: 核心受众A, share: 50, note: ""}
+  - {name: 核心受众B, share: 50, note: ""}
+rewrite_types:          # 可改写的文案类型
+  - 活动转化
+  - 生活方式种草
+  - 用户故事
+  - 专业教育
+  - 评论运营

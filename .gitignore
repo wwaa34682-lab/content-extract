@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+extract-output/
+config.yaml
+*.mp4
+*.m4a
+*.wav
